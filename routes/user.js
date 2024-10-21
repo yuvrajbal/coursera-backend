@@ -83,7 +83,7 @@ userRouter.post("/login", async function (req, res) {
   }
 });
 
-userRouter.get("/courses", userMiddleware, async function (req, res) {
+userRouter.get("/courses", async function (req, res) {
   try {
     const courses = await courseModel.find();
 
